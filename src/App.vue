@@ -1,15 +1,30 @@
 <script>
 import AppHeader from './components/AppHeader.vue'
+import ListProducts from './components/ListProducts.vue'
+import MenuNav from './components/MenuNav.vue'
+import AppFooter from './components/AppFooter.vue'
+
+
 
 export default {
   components: {
-    AppHeader
+    AppHeader,
+    ListProducts,
+    MenuNav,
+    AppFooter,
   }
 }
 </script>
 
 <template>
   <AppHeader />
+
+  <main>
+    <ListProducts />
+    <MenuNav />
+  </main>
+
+  <AppFooter />
 </template>
 
 <style lang="scss">
