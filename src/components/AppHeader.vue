@@ -62,25 +62,28 @@ export default {
 
 <template>
     <header>
+        <div class="container">
+            <section>
+                <!-- logo -->
+                <a href="#">
+                    <img src="/dc-logo.png" alt="DC Logo">
+                </a>
 
-        <!-- logo -->
-        <a href="#">
-            <img src="/dc-logo.png" alt="DC Logo">
-        </a>
+                <!-- menu di navigazione -->
 
-        <!-- menu di navigazione -->
+                <nav>
+                    <ul>
+                        <li v-for="link in  links">
+                            <a :href="link.url" :class="link.current ? 'active' : ''">
+                                {{ link.text }}
+                            </a>
+                        </li>
 
-        <nav>
-            <ul>
-                <li v-for="link in  links">
-                    <a :href="link.url" :class="link.current ? 'active' : ''">
-                        {{ link.text }}
-                    </a>
-                </li>
+                    </ul>
+                </nav>
+            </section>
 
-            </ul>
-        </nav>
-
+        </div>
     </header>
 </template>
 
@@ -90,17 +93,32 @@ export default {
 
 header {
     background-color: $primary;
-    margin-top: 3rem;
+    font-weight: 500;
+
+    section {
+        @include center(horizontal);
+        justify-content: space-between;
+        padding: 1rem 0;
+
+    }
 
     ul {
+
         list-style: none;
         @include center();
+        border: 1px dashed black;
+
+        li {
+            border: 1px dashed black;
+        }
 
         li a {
-            display: inline-block;
+            font-size: 14px;
             text-decoration: none;
-            padding: 0;
-            margin: 1rem;
+            margin: 0 1rem;
+            padding: auto 0;
+            color: #46464c;
+            border: 1px dashed black;
 
             &.active,
             &:hover {

@@ -6,39 +6,41 @@ export default {
 
 <template>
     <section>
-        <ul>
-            <li>
-                <a href="#">
-                    <img src="../assets/images/buy-comics-digital-comics.png">
-                    <p>DIGITAL COMICS</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../assets/images/buy-comics-merchandise.png">
-                    <p>DC MERCHANDISE</p>
-                </a>
-            </li>
+        <div class="container">
+            <ul>
+                <li>
+                    <a href="#">
+                        <img src="../assets/images/buy-comics-digital-comics.png">
+                        <p>DIGITAL COMICS</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../assets/images/buy-comics-merchandise.png">
+                        <p>DC MERCHANDISE</p>
+                    </a>
+                </li>
 
-            <li>
-                <a href="#">
-                    <img src="../assets/images/buy-comics-subscriptions.png">
-                    <p>SUBSCRIPTION</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../assets/images/buy-comics-shop-locator.png">
-                    <p>COMIC SHOP LOCATOR</p>
-                </a>
-            </li>
-            <li>
-                <a href="#">
-                    <img src="../assets/images/buy-dc-power-visa.svg">
-                    <p>DC POWER VISA</p>
-                </a>
-            </li>
-        </ul>
+                <li>
+                    <a href="#">
+                        <img src="../assets/images/buy-comics-subscriptions.png">
+                        <p>SUBSCRIPTION</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../assets/images/buy-comics-shop-locator.png">
+                        <p>COMIC SHOP LOCATOR</p>
+                    </a>
+                </li>
+                <li>
+                    <a href="#">
+                        <img src="../assets/images/buy-dc-power-visa.svg">
+                        <p>DC POWER VISA</p>
+                    </a>
+                </li>
+            </ul>
+        </div>
     </section>
 </template>
 
@@ -48,16 +50,31 @@ export default {
 
 section {
     background-color: #0282f9;
-    padding: 5rem;
+    padding: 4rem 0;
+
+    img {
+        vertical-align: middle;
+        width: 3.5rem;
+        margin: 0 .5rem;
+    }
+
+    p {
+        display: inline;
+        vertical-align: middle;
+    }
 
     ul {
         list-style: none;
         @include center();
 
+        li {
+            margin: 0 1rem;
+        }
+
         li a {
             display: inline-block;
             text-decoration: none;
-            padding: .5rem;
+
             color: #fff;
 
         }

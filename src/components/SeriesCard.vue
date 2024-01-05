@@ -1,19 +1,13 @@
 <script>
-import SeriesCard from './SeriesCard.vue';
-
 export default {
-    name: "ListProducts",
-    components: {
-        SeriesCard,
-    }
+    name: "SeriesCard",
 }
 </script>
 
 <template>
     <section>
         <div class="container">
-            <h1> __Content goes here__ </h1>
-            <SeriesCard />
+            <h1>CARTA PRODOTTO</h1>
         </div>
     </section>
 </template>
